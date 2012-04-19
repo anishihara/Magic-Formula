@@ -1,0 +1,42 @@
+﻿@model IEnumerable<MagicFormula.Models.Stock>
+
+@{
+    ViewBag.Title = "Magic Formula";
+}
+
+<h2>Magic Formula</h2>
+
+<p>
+
+</p>
+<table>
+    <tr>
+    
+        <th>
+            Name
+        </th>
+        <th>
+            PL
+        </th>
+        <th>
+            ROE
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+
+        <td>
+            @item.Name
+        </td>
+        <td>
+            @String.Format("{0:F}", item.PL)
+        </td>
+        <td>
+            @String.Format("{0:F}", item.ROE)
+        </td>
+    </tr>
+}
+
+</table>
+
